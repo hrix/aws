@@ -91,6 +91,9 @@ Resources:
           additionalEventData:
             SignatureVersion:
               - SigV2
+          resources:
+            ARN:
+              - arn:aws:s3:::${LogTargetS3Name}
       State: ENABLED
       Targets:
         - Arn: !Ref 'SnsTopic'
